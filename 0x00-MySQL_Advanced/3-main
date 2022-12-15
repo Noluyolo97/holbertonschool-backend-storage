@@ -3,4 +3,3 @@
 
 cat metal_bands.sql | mysql -uroot -p holberton
 cat 3-glam_rock.sql | mysql -uroot -p holberton
-
