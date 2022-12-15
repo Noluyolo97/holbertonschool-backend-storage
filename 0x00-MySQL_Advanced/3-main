@@ -1,5 +1,6 @@
-#!/bin/bash
-# Look to the file glam rock
+-- Lists all bands with Glam rock AS their main style, ranked by their longevity
 
-cat metal_bands.sql | mysql -uroot -p holberton
-cat 3-glam_rock.sql | mysql -uroot -p holberton
+SELECT  band_name,(ifnull(split,2020) - ifnull(formed,0)) lifespan
+FROM metal_bands
+WHERE style LIKE '%Glam rock%'
+ORDER BY lifespan DESC 
